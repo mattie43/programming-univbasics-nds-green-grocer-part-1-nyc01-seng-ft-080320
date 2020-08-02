@@ -17,8 +17,6 @@ def consolidate_cart(cart)
   item_num = 0
   cart[item_num][:item].each do |item|
     binding.pry
-    if !final_arr.include?(item)
-    end
     item_num += 1
   end
   binding.pry
