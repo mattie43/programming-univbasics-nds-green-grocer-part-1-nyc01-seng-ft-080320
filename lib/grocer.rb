@@ -15,10 +15,7 @@ def consolidate_cart(cart)
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
   final_arr = [{:item => "AVOCADO", :price => 3.00, :clearance => true, :count => 2}]
   cart.each do |item|
-    final_arr[:item].any? do |k| 
-      k == item[:item]
-      binding.pry
-    end
+    
   end
 end
 
