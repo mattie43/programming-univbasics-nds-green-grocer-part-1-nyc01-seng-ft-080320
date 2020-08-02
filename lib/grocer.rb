@@ -14,13 +14,9 @@ def consolidate_cart(cart)
   # REMEMBER: This returns a new Array that represents the cart. Don't merely
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
   final_arr = [{:item => "AVOCADO", :price => 3.00, :clearance => true, :count => 2}]
-  item_num = 0
-  binding.pry
-  cart[item_num][:item].each do |item|
-    binding.pry
-    item_num += 1
+  cart.each do |item|
+    
   end
-  binding.pry
 end
 
 
