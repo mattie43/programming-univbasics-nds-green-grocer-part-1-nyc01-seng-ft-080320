@@ -13,9 +13,16 @@ def consolidate_cart(cart)
   #
   # REMEMBER: This returns a new Array that represents the cart. Don't merely
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
-  final_arr = [{:item => "AVOCADO", :price => 3.00, :clearance => true, :count => 2}]
+  final_arr = []
+  item_num = 0
   cart.each do |item|
-    binding.pry
+    if find_item_by_name_in_collection(item[:item], final_arr)
+      binding.pry
+    else
+      final_arr << item
+      final_arr[item_num][:count] += 1
+      binding.pry
+    end
   end
 end
 
