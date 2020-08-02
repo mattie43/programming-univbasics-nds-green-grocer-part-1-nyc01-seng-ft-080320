@@ -14,15 +14,13 @@ def consolidate_cart(cart)
   # REMEMBER: This returns a new Array that represents the cart. Don't merely
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
   final_arr = []
-  item_num = 0
   cart.each do |item|
     if find_item_by_name_in_collection(item[:item], final_arr) != nil
-      final_arr[item_num][:count] += 1
+      final_arr[item[:item]][:count] += 1
     else
       final_arr << item
-      final_arr[item_num][:count] = 1
+      final_arr[item[:item]][:count] = 1
     end
-    item_num += 1
   end
 end
 
