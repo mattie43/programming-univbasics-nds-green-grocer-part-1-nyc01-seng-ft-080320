@@ -17,10 +17,10 @@ def consolidate_cart(cart)
   cart.each do |item|
     binding.pry
     if find_item_by_name_in_collection(item[:item], final_arr) != nil
-      final_arr[ind][:count] += 1
+      final_arr[][:count] += 1
     else
       final_arr << item
-      final_arr[ind][:count] = 1
+      final_arr[-1][:count] = 1
     end
   end
 end
